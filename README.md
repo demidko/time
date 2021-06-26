@@ -1,38 +1,57 @@
-# Library
+# [print-utils](https://jitpack.io/#demidko/print-utils)
 
-Java library template written in the Kotlin language.
+Library for displaying durations in a readable form.
 
 ## Usage
 
-Make sure you are signed in to your GitHub account, then just
-click [`here`](https://github.com/demidko/library/generate) to use template.
-
-## Build
-
-```shell
-./gradlew build
+```kotlin
+val humanView = 1232443224L.printSeconds() // "39yr 29d 9h 20m 24s"
 ```
 
-Your jar library will be located at `./build/libs`. See
-also [Gradle documentation](https://docs.gradle.org/current/samples/sample_building_java_libraries.html)
-.
+## Download with [Gradle](https://gradle.org/)
 
-## Deploy
-
-Create GitHub release with source code. Then, tell the world where to get your library, for example:
+Add the JitPack repository to your `build.gradle.kts`:
 
 ```kotlin
 repositories {
-    jcenter()
     maven("https://jitpack.io")
-}
-dependencies {
-    implementation("com.github.demidko:library:1.0")
 }
 ```
 
-See also [JitPack documentation](https://jitpack.io/docs/#publishing-on-jitpack).
+Add the dependency:
 
+```kotlin
+dependencies {
+    implementation("com.github.demidko:print-utils:2021.06.26")
+}
+```
+
+## Download with [Maven](https://maven.apache.org/)
+
+Add the JitPack repository to your `pom.xml`:
+
+```xml
+
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+```
+
+Add the dependency:
+
+```xml
+
+<dependencies>
+  <dependency>
+    <groupId>com.github.demidko</groupId>
+    <artifactId>print-utils</artifactId>
+    <version>2021.06.26</version>
+  </dependency>
+</dependencies>
+```
 
 
 

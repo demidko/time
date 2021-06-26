@@ -5,7 +5,7 @@ repositories {
 plugins {
   `java-library`
   `maven-publish`
-  kotlin("jvm") version "1.5.10"
+  kotlin("jvm") version "1.5.20"
 }
 dependencies {
   // This dependency is exported to consumers, that is to say found on their compile classpath.
@@ -28,7 +28,7 @@ tasks.test {
 }
 publishing {
   publications {
-    create<MavenPublication>("library") {
+    create<MavenPublication>("print-utils") {
       groupId = "com.github.demidko"
       from(components["java"])
     }
