@@ -22,7 +22,7 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.demidko:print-utils:2021.06.26")
+    implementation("com.github.demidko:print-utils:2021.06.27")
 }
 ```
 
@@ -48,7 +48,7 @@ Add the dependency:
   <dependency>
     <groupId>com.github.demidko</groupId>
     <artifactId>print-utils</artifactId>
-    <version>2021.06.26</version>
+    <version>2021.06.27</version>
   </dependency>
 </dependencies>
 ```
