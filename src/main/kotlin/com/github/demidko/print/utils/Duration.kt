@@ -4,48 +4,49 @@ import kotlin.time.Duration
 
 fun Duration.print() = inWholeSeconds.printSeconds()
 
-/** seconds to human time duration */
-fun Long.printSeconds() = when (val t = grepYears()) {
+fun Long.printSeconds() = toULong().printSeconds()
+
+fun ULong.printSeconds() = when (val t = grepYears()) {
   "" -> "0s"
   else -> t.trim()
 }
 
-private const val years = 60L * 60L * 24L * 365
+private val years = 60UL * 60UL * 24UL * 365UL
 
-private fun Long.grepYears() = when (val count = div(years)) {
-  0L -> grepMonth()
+private fun ULong.grepYears() = when (val count = div(years)) {
+  0UL -> grepMonth()
   else -> "${count}yr ${minus(count * years).grepMonth()}"
 }
 
-private const val months = 60L * 60L * 24L * 30L
+private val months = 60UL * 60UL * 24UL * 30UL
 
-private fun Long.grepMonth() = when (val count = div(months)) {
-  0L -> grepDays()
+private fun ULong.grepMonth() = when (val count = div(months)) {
+  0UL -> grepDays()
   else -> "${count}mo ${minus(count * months).grepDays()}"
 }
 
-private const val days = 60L * 60L * 24L
+private val days = 60UL * 60UL * 24UL
 
-private fun Long.grepDays() = when (val count = div(days)) {
-  0L -> grepHours()
+private fun ULong.grepDays() = when (val count = div(days)) {
+  0UL -> grepHours()
   else -> "${count}d ${minus(count * days).grepHours()}"
 }
 
-private const val hours = 60L * 60L
+private val hours = 60UL * 60UL
 
-private fun Long.grepHours() = when (val count = div(hours)) {
-  0L -> grepMinutes()
+private fun ULong.grepHours() = when (val count = div(hours)) {
+  0UL -> grepMinutes()
   else -> "${count}h ${minus(count * hours).grepMinutes()}"
 }
 
-private const val minutes = 60L
+private const val minutes = 60UL
 
-private fun Long.grepMinutes() = when (val count = div(minutes)) {
-  0L -> grepSeconds()
+private fun ULong.grepMinutes() = when (val count = div(minutes)) {
+  0UL -> grepSeconds()
   else -> "${count}m ${minus(count * minutes).grepSeconds()}"
 }
 
-private fun Long.grepSeconds() = when (this) {
-  0L -> ""
+private fun ULong.grepSeconds() = when (this) {
+  0UL -> ""
   else -> "${this}s"
 }
