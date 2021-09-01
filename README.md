@@ -22,7 +22,7 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.demidko:print-utils:2021.06.27")
+    implementation("com.github.demidko:print-utils:2021.09.01")
 }
 ```
 
