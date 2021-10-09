@@ -1,4 +1,4 @@
-# [Time](https://jitpack.io/#demidko/time)
+# Time
 
 Library for displaying durations in a readable form.
 
