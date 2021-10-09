@@ -1,56 +1,22 @@
-# [print-utils](https://jitpack.io/#demidko/print-utils)
+# [Time](https://jitpack.io/#demidko/time)
 
 Library for displaying durations in a readable form.
+
+## Download
+
+You need Gradle or Maven or other build system.
+
+[![](https://jitpack.io/v/demidko/time.svg)](https://jitpack.io/#demidko/time)
 
 ## Usage
 
 ```kotlin
-val humanView = 1232443224L.printSeconds() // "39yr 29d 9h 20m 24s"
-```
+import kotlin.time.Duration.Companion.days
+import com.github.demidko.time.print
+import com.github.demidko.time.printSeconds
 
-## Download with [Gradle](https://gradle.org/)
-
-Add the JitPack repository to your `build.gradle.kts`:
-
-```kotlin
-repositories {
-    maven("https://jitpack.io")
-}
-```
-
-Add the dependency:
-
-```kotlin
-dependencies {
-    implementation("com.github.demidko:print-utils:2021.09.03")
-}
-```
-
-## Download with [Maven](https://maven.apache.org/)
-
-Add the JitPack repository to your `pom.xml`:
-
-```xml
-
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
-```
-
-Add the dependency:
-
-```xml
-
-<dependencies>
-  <dependency>
-    <groupId>com.github.demidko</groupId>
-    <artifactId>print-utils</artifactId>
-    <version>2021.09.03</version>
-  </dependency>
-</dependencies>
+val humanDurationView = days(365).print()         // "1yr"
+val humanSecondsView = 1232443224L.printSeconds() // "39yr 29d 9h 20m 24s"
 ```
 
 

@@ -1,4 +1,4 @@
-package com.github.demidko.print.utils
+package com.github.demidko.time
 
 import kotlin.time.Duration
 

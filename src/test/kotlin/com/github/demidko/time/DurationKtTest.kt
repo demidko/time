@@ -1,4 +1,4 @@
-package com.github.demidko.print.utils
+package com.github.demidko.time
 
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo

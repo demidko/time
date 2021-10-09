@@ -5,7 +5,7 @@ repositories {
 plugins {
   `java-library`
   `maven-publish`
-  kotlin("jvm") version "1.5.30"
+  kotlin("jvm") version "1.5.31"
 }
 dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
